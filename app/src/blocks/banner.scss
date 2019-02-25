@@ -1,0 +1,186 @@
+$name: banner;
+
+.#{$name} {
+	display: block;
+	width: 100%;
+	position: relative;
+	color: white;
+	overflow: hidden;
+
+	&__img-wrap {
+		display: block;
+		width: 100%;
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		padding-bottom: 56%;
+		background: no-repeat center / cover;
+	}
+
+	&__content-wrap {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 15px;
+		z-index: 2;
+	}
+
+	&__content {
+
+	}
+
+	&__more-link-wrap {
+		@extend %transition;
+		position: absolute;
+		bottom: -50px;
+		left: 0;
+		width: 100%;
+		padding: 0 15px 15px;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		z-index: 1;
+	}
+
+	&__more-link {
+		padding: 3px 15px 0;
+		border-top: 1px solid white;
+	}
+
+	&_align_left {
+
+		.#{$name} {
+
+			&__content-wrap {
+				text-align: left;
+				justify-content: flex-start;
+			}
+		}
+	}
+
+	&_align_right {
+
+		.#{$name} {
+
+			&__content-wrap {
+				text-align: right;
+				justify-content: flex-end;
+			}
+		}
+	}
+
+	&_valign_top {
+
+		.#{$name} {
+
+			&__content-wrap {
+				align-items: flex-start;
+			}
+		}
+	}
+
+	&_valign_bottom {
+
+		.#{$name} {
+
+			&__content-wrap {
+				align-items: flex-end;
+			}
+		}
+	}
+
+	&_fog {
+
+		.#{$name} {
+
+			&__img-wrap {
+				position: relative;
+
+				&::after {
+					@extend %transition;
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background: $color-text;
+					opacity: .5;
+				}
+			}
+		}
+	}
+
+	&_has_more-link {
+
+		&::after {
+			@extend %transition;
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 60%;
+			background: linear-gradient(to top, rgba($color-text, .8), transparent);
+			opacity: 0;
+		}
+
+		&:hover {
+
+			&::after {
+				opacity: 1;
+			}
+
+			.#{$name} {
+
+				&__more-link-wrap {
+					bottom: 0;
+				}
+			}
+		}
+	}
+
+	&_zoom {
+
+		&::after {
+			@extend %transition;
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba($color-text, .5) url('../img/icons/search.svg') no-repeat center / 20%;
+			opacity: 0;
+		}
+
+		&:hover {
+
+			&::after {
+				opacity: 1;
+			}
+		}
+
+		&.#{$name}_video {
+
+			&::after {
+				background-image: url('../img/icons/play.svg');
+			}
+		}
+
+		&.#{$name}_fog {
+
+			&::after {
+				background-color: transparent;
+			}
+		}
+	}
+}

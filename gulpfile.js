@@ -143,6 +143,14 @@ lazyRequireTask('fonts', tasks + 'fonts', {
 	dist: dist + 'fonts' // Путь для готовых файлов
 });
 
+/** FILES
+ * Переносит файлы из папки files
+ */
+lazyRequireTask('files', tasks + 'files', {
+	src: app + 'files/**/*', // Путь к исходникам
+	dist: dist + 'files' // Путь для готовых файлов
+});
+
 /** CLEAN
  * Удаляет папки с собранным проектом и служебными файлами
  */
@@ -172,7 +180,8 @@ gulp.task('build',
 			'img',
 			'svg',
 			'svg:sprite',
-			'fonts'
+			'fonts',
+			'files'
 		)
 	)
 );
@@ -230,6 +239,15 @@ gulp.task('watch', function() {
 
 	// FONTS
 	gulp.watch(app + 'fonts/**/*', gulp.series('fonts'))
+		.on('unlink', function (filepath) {
+			var
+				pathSrc = path.relative(path.resolve(app), filepath),
+				pathDist = path.resolve(dist, pathSrc);
+			del(pathDist);
+		});
+
+	// FILES
+	gulp.watch(app + 'files/**/*', gulp.series('files'))
 		.on('unlink', function (filepath) {
 			var
 				pathSrc = path.relative(path.resolve(app), filepath),

@@ -1,4 +1,5 @@
 include ../mixins/check
+include ../mixins/banner
 
 .mb-30
 
@@ -65,6 +66,8 @@ include ../mixins/check
 				.title.title_as_h4.title_font_third .title.title_as_h4.title_font_third
 			.mb-5
 				.title.title_as_h5.title_font_third .title.title_as_h5.title_font_third
+			.mb-5
+				.title.title_line_after .title.title_line_after
 
 	.main__separator
 		.row.mb-15
@@ -107,3 +110,76 @@ include ../mixins/check
 				id: 'check-2',
 				text: '.check'
 			})(class='check_color_white')
+
+	.row.main__separator
+
+		.col-4.mb-30
+			+banner({
+				link: '#',
+				img: 'img/content/banner.jpg'
+			})
+				.title.title_font_second.title_as_h4.upper Дмитрий
+
+		.col-4.mb-30
+			+banner({
+				link: '#',
+				img: 'img/content/banner.jpg'
+			})(class='banner_align_left')
+				.title.title_font_second.title_as_h4.upper Дмитрий
+
+		.col-4.mb-30
+			+banner({
+				link: '#',
+				img: 'img/content/banner.jpg'
+			})(class='banner_align_right')
+				.title.title_font_second.title_as_h4.upper Дмитрий
+
+		.col-4.mb-30
+			+banner({
+				link: '#',
+				img: 'img/content/banner.jpg'
+			})(class='banner_valign_top')
+				.title.title_font_second.title_as_h4.upper Дмитрий
+
+		.col-4.mb-30
+			+banner({
+				link: '#',
+				img: 'img/content/banner.jpg'
+			})(class='banner_valign_bottom')
+				.title.title_font_second.title_as_h4.upper Дмитрий
+
+		.col-4.mb-30
+			+banner({
+				link: '#',
+				img: 'img/content/banner.jpg'
+			})(class='banner_fog')
+				.title.title_font_second.title_as_h4.upper Дмитрий
+
+		.col-4.mb-30
+			+banner({
+				link: '#',
+				img: 'img/content/banner.jpg',
+				moreLink: true
+			})
+				.title.title_font_second.title_as_h4.upper Дмитрий
+
+		.col-4.mb-30
+			+banner({
+				link: 'img/content/banner.jpg',
+				img: 'img/content/banner.jpg',
+				zoom: {
+					group: 'group-1',
+					title: 'Banner'
+				}
+			})
+
+		.col-4.mb-30
+			+banner({
+				link: 'files/video.mp4',
+				img: 'img/content/banner.jpg',
+				zoom: {
+					group: 'group-2',
+					title: 'Banner'
+				},
+				video: true
+			})

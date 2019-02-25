@@ -105,6 +105,10 @@ svg {
 
 .text-center {
 	text-align: center !important;
+
+	&.title::after {
+		margin: 0 auto;
+	}
 }
 
 .text-right {
