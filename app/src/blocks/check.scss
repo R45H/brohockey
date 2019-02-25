@@ -1,0 +1,126 @@
+$name: check;
+
+.#{$name} {
+	display: flex;
+
+	&__input {
+		display: none;
+
+		&:checked {
+
+			+ label {
+
+				&::before {
+					background-color: $color-text;
+				}
+
+				&:hover {
+
+					&::before {
+						background-color: $color-gray;
+					}
+				}
+
+				&:active {
+
+					&::before {
+						background-color: $color-text-light;
+					}
+				}
+			}
+		}
+	}
+
+	&__label {
+		@extend %transition;
+		display: inline-flex;
+		align-items: flex-start;
+		cursor: pointer;
+		user-select: none;
+		color: $color-text;
+
+		&::before {
+			@extend %transition;
+			content: '';
+			width: 18px;
+			height: 18px;
+			border: 1px solid $color-text;
+			border-radius: 50%;
+			background-color: transparent;
+			background-clip: content-box;
+			padding: 2px;
+			margin-right: 10px;
+			margin-top: 4px;
+		}
+
+		&:hover {
+			color: $color-gray;
+
+			&::before {
+				border-color: $color-gray;
+			}
+		}
+
+		&:active {
+			color: $color-text-light;
+
+			&::before {
+				border-color: $color-text-light;
+			}
+		}
+	}
+
+	&_color_white {
+
+		.#{$name}__input {
+
+			&:checked {
+
+				+ label {
+
+					&::before {
+						background-color: white;
+					}
+
+					&:hover {
+
+						&::before {
+							background-color: $color-gray;
+						}
+					}
+
+					&:active {
+
+						&::before {
+							background-color: $color-light;
+						}
+					}
+				}
+			}
+		}
+
+		.#{$name}__label {
+			color: white;
+
+			&::before {
+				border: 1px solid white;
+			}
+
+			&:hover {
+				color: $color-gray;
+
+				&::before {
+					border-color: $color-gray;
+				}
+			}
+
+			&:active {
+				color: $color-light;
+
+				&::before {
+					border-color: $color-light;
+				}
+			}
+		}
+	}
+}

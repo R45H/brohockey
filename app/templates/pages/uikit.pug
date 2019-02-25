@@ -1,3 +1,5 @@
+include ../mixins/check
+
 .mb-30
 
 .container
@@ -93,3 +95,15 @@
 			input.input.input_color_white(type='tel' placeholder='.input.input_color_white')
 		.col-3.mb-30
 			textarea.input(placeholder='textarea.input')
+
+	.row.main__separator
+		.col-3.mb-30
+			+check({
+				id: 'check-1',
+				text: '.check'
+			})
+		.col-3.mb-30.main__black
+			+check({
+				id: 'check-2',
+				text: '.check'
+			})(class='check_color_white')
