@@ -1,0 +1,7 @@
+include ../mixins/svg
+
+mixin opportunity(data)
+	.opportunity
+		.opportunity__icon-wrap.mb-10
+			+svg(data.icon, 'opportunity__icon')
+		.title.title_as_h2.opportunity__title= data.name

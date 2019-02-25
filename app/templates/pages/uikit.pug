@@ -1,5 +1,6 @@
 include ../mixins/check
 include ../mixins/banner
+include ../mixins/opportunity
 
 .mb-30
 
@@ -183,3 +184,7 @@ include ../mixins/banner
 				},
 				video: true
 			})
+
+	.row.main__separator
+		.col-4
+			+opportunity(opportunity[0])

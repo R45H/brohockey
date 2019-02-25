@@ -1,0 +1,10 @@
+{
+	"opportunity": [
+		{"name": "Тренировки на льду", "icon": "opportunity-trainings"},
+		{"name": "Занятия ОФП", "icon": "opportunity-ofp"},
+		{"name": "Формирование команд", "icon": "opportunity-command"},
+		{"name": "Бросковая зона Дриблинг", "icon": "opportunity-dribling"},
+		{"name": "Видеоразборы", "icon": "opportunity-video"},
+		{"name": "Турниры выходного дня", "icon": "opportunity-tournirs"}
+	]
+}

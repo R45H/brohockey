@@ -1,0 +1,39 @@
+$name: opportunity;
+
+.#{$name} {
+	display: block;
+	text-align: center;
+
+	&__icon-wrap {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+	}
+
+	&__icon {
+		height: 90px;
+		width: auto;
+	}
+
+	&__title {
+		vertical-align: middle;
+
+		&::before,
+		&::after {
+			content: '';
+			vertical-align: middle;
+			display: inline-block;
+			width: 25px;
+			height: 1px;
+			background-color: currentColor;
+		}
+
+		&::before {
+			margin-right: 10px;
+		}
+
+		&::after {
+			margin-left: 10px;
+		}
+	}
+}
