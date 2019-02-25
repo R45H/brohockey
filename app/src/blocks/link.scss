@@ -8,11 +8,11 @@ $name: link;
 		color: white;
 
 		&:hover {
-			color: $color-light;
+			color: $color-gray;
 		}
 
 		&:active {
-			color: $color-gray;
+			color: $color-light;
 		}
 	}
 

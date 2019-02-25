@@ -1,0 +1,61 @@
+$name: btn;
+
+.#{$name} {
+	@extend %transition;
+	display: inline-block;
+	position: relative;
+	font-family: $font-third;
+	font-size: 18px;
+	font-weight: normal;
+	color: $color-dark;
+	border: 1px solid $color-dark;
+	background-color: transparent;
+	text-align: center;
+	text-transform: uppercase;
+	cursor: pointer;
+	line-height: 1.2;
+	outline: none;
+	padding: 17px 40px 12px;
+	word-break: break-word;
+	user-select: none;
+
+	&:hover,
+	&:focus {
+		color: white;
+		background-color: $color-text;
+		border-color: $color-text;
+	}
+
+	&:active {
+		color: white;
+		background-color: $color-text-light;
+		border-color: $color-text-light;
+	}
+
+	&_wide {
+		display: block;
+		width: 100%;
+	}
+
+	&_color_white {
+		color: white;
+		border-color: white;
+
+		&:hover,
+		&:focus {
+			color: $color-text;
+			border-color: white;
+			background-color: white;
+		}
+
+		&:active {
+			color: $color-text;
+			background-color: $color-gray;
+			border-color: $color-gray;
+		}
+	}
+}
+
+input.#{$name} {
+	white-space: pre-wrap;
+}

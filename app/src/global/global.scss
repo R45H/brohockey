@@ -75,11 +75,11 @@ a {
 		border-bottom: 1px solid currentColor;
 
 		&:hover {
-			color: $color-text-light;
+			color: $color-gray;
 		}
 
 		&:active {
-			color: $color-gray;
+			color: $color-text-light;
 		}
 	}
 }
