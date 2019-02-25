@@ -1,7 +1,10 @@
-$name: check;
+$name: radio;
 
 .#{$name} {
-	display: flex;
+
+	&__item {
+		display: flex;
+	}
 
 	&__input {
 		display: none;
@@ -79,13 +82,13 @@ $name: check;
 				+ label {
 
 					&::before {
-						background-color: white;
+						background-color: $color-gray;
 					}
 
 					&:hover {
 
 						&::before {
-							background-color: $color-gray;
+							background-color: white;
 						}
 					}
 
@@ -100,17 +103,17 @@ $name: check;
 		}
 
 		.#{$name}__label {
-			color: white;
+			color: $color-gray;
 
 			&::before {
-				border: 1px solid white;
+				border: 1px solid $color-gray;
 			}
 
 			&:hover {
-				color: $color-gray;
+				color: white;
 
 				&::before {
-					border-color: $color-gray;
+					border-color: white;
 				}
 			}
 

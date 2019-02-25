@@ -5,10 +5,10 @@ $name: link;
 	border-bottom: none;
 
 	&_color_white {
-		color: white;
+		color: $color-gray;
 
 		&:hover {
-			color: $color-gray;
+			color: white;
 		}
 
 		&:active {

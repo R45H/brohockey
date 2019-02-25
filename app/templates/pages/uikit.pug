@@ -1,4 +1,4 @@
-include ../mixins/check
+include ../mixins/radio
 include ../mixins/banner
 include ../mixins/opportunity
 
@@ -102,15 +102,23 @@ include ../mixins/opportunity
 
 	.row.main__separator
 		.col-3.mb-30
-			+check({
-				id: 'check-1',
-				text: '.check'
+			+radio({
+				name: 'radio-group-1',
+				items: [
+					{text: '.radio'},
+					{text: '.radio'},
+					{text: '.radio'}
+				]
 			})
 		.col-3.mb-30.main__black
-			+check({
-				id: 'check-2',
-				text: '.check'
-			})(class='check_color_white')
+			+radio({
+				name: 'radio-group-2',
+				items: [
+					{text: '.radio_color_white'},
+					{text: '.radio_color_white'},
+					{text: '.radio_color_white'}
+				]
+			})(class='radio_color_white')
 
 	.row.main__separator
 
