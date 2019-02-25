@@ -1,0 +1,75 @@
+$name: title;
+
+.#{$name} {
+	font-size: 35px;
+	font-weight: normal;
+
+	&_font_second {
+		font-family: $font-second;
+		font-size: 7.5rem;
+		font-weight: bold;
+
+		&.#{$name}_as_h2 {
+			font-size: 32px;
+		}
+
+		&.#{$name}_as_h3 {
+			font-size: 24px;
+		}
+
+		&.#{$name}_as_h4 {
+			font-size: 20px;
+		}
+
+		&.#{$name}_as_h5 {
+			font-size: 18px;
+			font-weight: normal;
+		}
+	}
+
+	&_font_third {
+		font-family: $font-third;
+		font-size: 30px;
+		font-weight: bold;
+
+		&.#{$name}_as_h2 {
+			font-size: 24px;
+		}
+
+		&.#{$name}_as_h3 {
+			font-size: 18px;
+		}
+
+		&.#{$name}_as_h4 {
+			font-size: 18px;
+			font-weight: normal;
+		}
+
+		&.#{$name}_as_h5 {
+			font-size: 15px;
+			font-weight: normal;
+		}
+	}
+
+	&_as_h2 {
+		font-size: 22px;
+	}
+
+	&_as_h3 {
+		font-size: 20px;
+	}
+
+	&_as_h4 {
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	&_as_h5 {
+		font-size: 18px;
+	}
+
+	&_as_h6 {
+		font-size: 16px;
+	}
+}
+

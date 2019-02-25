@@ -1,5 +1,11 @@
 $name: header;
 
 .#{$name} {
-
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: $header-space;
+	z-index: 50;
+	transform: translate3d(0, 0, 0);
 }

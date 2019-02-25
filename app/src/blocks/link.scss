@@ -1,0 +1,26 @@
+$name: link;
+
+.#{$name} {
+	@extend a:not([class]);
+	border-bottom: none;
+
+	&_color_white {
+		color: white;
+
+		&:hover {
+			color: $color-light;
+		}
+
+		&:active {
+			color: $color-gray;
+		}
+	}
+
+	&_line {
+		border-bottom: 1px solid currentColor;
+	}
+
+	&_font_third {
+		font-family: $font-third;
+	}
+}

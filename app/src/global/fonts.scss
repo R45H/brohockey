@@ -9,3 +9,61 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+/* Fira Sans Condensed */
+@font-face {
+	font-family: 'Fira Sans Condensed';
+	src: url('../fonts/firasanscondensed/firasanscondensed-regular.woff2') format('woff2'),
+		url('../fonts/firasanscondensed/firasanscondensed-regular.woff') format('woff'),
+		url('../fonts/firasanscondensed/firasanscondensed-regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Fira Sans Condensed';
+	src: url('../fonts/firasanscondensed/firasanscondensed-italic.woff2') format('woff2'),
+		url('../fonts/firasanscondensed/firasanscondensed-italic.woff') format('woff'),
+		url('../fonts/firasanscondensed/firasanscondensed-italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Fira Sans Condensed';
+	src: url('../fonts/firasanscondensed/firasanscondensed-medium.woff2') format('woff2'),
+		url('../fonts/firasanscondensed/firasanscondensed-medium.woff') format('woff'),
+		url('../fonts/firasanscondensed/firasanscondensed-medium.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Fira Sans Condensed';
+	src: url('../fonts/firasanscondensed/firasanscondensed-mediumitalic.woff2') format('woff2'),
+		url('../fonts/firasanscondensed/firasanscondensed-mediumitalic.woff') format('woff'),
+		url('../fonts/firasanscondensed/firasanscondensed-mediumitalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+/* ===== */
+
+/* Oswald */
+@font-face {
+	font-family: 'Fira Sans Condensed';
+	src: url('../fonts/oswald/oswald-medium.woff2') format('woff2'),
+	url('../fonts/oswald/oswald-medium.woff') format('woff'),
+	url('../fonts/oswald/oswald-medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Fira Sans Condensed';
+	src: url('../fonts/oswald/oswald-bold.woff2') format('woff2'),
+	url('../fonts/oswald/oswald-bold.woff') format('woff'),
+	url('../fonts/oswald/oswald-bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+/* ===== */

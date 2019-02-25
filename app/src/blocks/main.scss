@@ -1,5 +1,15 @@
 $name: main;
 
 .#{$name} {
+	flex: 1 0 auto;
 
+	&__separator {
+		padding-bottom: 30px;
+		margin-bottom: 30px;
+		border-bottom: 1px solid $color-gray;
+	}
+
+	&__black {
+		background: $color-text;
+	}
 }

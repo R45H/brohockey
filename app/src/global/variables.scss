@@ -1,35 +1,26 @@
-$color-main: null;
+$color-dark: #121212;
 $color-text: #333;
-
-$color-webcenter-1: #ff141f;
-$color-webcenter-2: #334b61;
-
-$color-vk: #45668e;
-$color-fb: #3b5998;
-$color-insta: #bc2a8d;
-$color-yt: #b00;
-$color-tw: #00aced;
+$color-text-light: #727272;
+$color-gray: #959595;
+$color-light: #e5e5e5;
 
 $point-sm: 576px;
 $point-md: 768px;
 $point-lg: 992px;
 $point-xl: 1200px;
 
-$font-main: sans-serif;
+$font-main: 'Times New Roman', serif;
+$font-second: 'Oswald', sans-serif;
+$font-third: 'Fira Sans Condensed', sans-serif;
+$font-fa: 'FontAwesome', sans-serif;
 
 $duration: .3s;
 
-// ----------------------------
-// МИКСИНЫ ДЛЯ ТЕКУЩЕГО ПРОЕКТА
-// ----------------------------
+$header-space: 0;
 
-// ----------------------------
-//
-//
-//
-// -------------
-// ОБЩИЕ МИКСИНЫ
-// -------------
+%transition {
+	transition: $duration / 2 ease;
+}
 
 // Брейкпоинты
 @mixin screen-sm($direct: 'min') {
