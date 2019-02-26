@@ -1,0 +1,24 @@
+include radio
+
+mixin cost(data)
+	.cost(class= data.sizeLg ? 'cost_size_lg' : '')
+
+		.title.title_font_second.title_line_after.upper.cost__title(
+			class= data.sizeLg ? 'title_as_h3 text-center' : 'title_as_h4'
+		)!= data.title
+
+		if data.radio
+			.cost__radio-wrap
+				+radio({
+					name: 'radio-cost-' + Math.round(Math.random() * 100) / 100,
+					items: data.radio
+				})(class='radio_color_white')
+
+		if data.desc
+			.cost__desc.color-gray= data.desc
+
+		.cost__price-wrap
+			.title.title_font_second.upper.cost__price(
+				class= data.sizeLg ? 'title_as_h2' : 'title_as_h3'
+			)= data.price
+			a.btn.btn_color_white.cost__btn(href='#') Записаться

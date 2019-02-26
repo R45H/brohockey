@@ -1,0 +1,30 @@
+$name: cost-wrap;
+
+.#{$name} {
+
+	@include screen-sm() {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 30px;
+	}
+
+	@include screen-lg() {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	&__col {
+		margin-bottom: 15px;
+
+		@include screen-sm() {
+			margin-bottom: 0;
+		}
+
+		&:first-child {
+
+			@include screen-md() {
+				grid-row-start: 1;
+				grid-row-end: 3;
+			}
+		}
+	}
+}

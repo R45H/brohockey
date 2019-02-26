@@ -1,0 +1,8 @@
+include ../mixins/cost
+
+mixin cost-wrap
+	.cost-wrap
+
+		each val in cost
+			.cost-wrap__col
+				+cost(val)

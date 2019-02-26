@@ -1,7 +1,9 @@
+include ../components/cost-wrap
 include ../mixins/radio
 include ../mixins/banner
 include ../mixins/opportunity
 include ../mixins/growth
+include ../mixins/cost
 
 .mb-30
 
@@ -207,3 +209,11 @@ include ../mixins/growth
 	.row.main__separator
 		.col-2.main__black
 			+growth(growth[0])
+
+	.row.main__separator
+		.col-4
+			+cost(cost[1])
+
+	.row.main__separator
+		.col-12
+			+cost-wrap
