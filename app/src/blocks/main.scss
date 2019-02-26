@@ -16,4 +16,13 @@ $name: main;
 		margin-top: -5px;
 		margin-bottom: -5px;
 	}
+
+	&__nogap-row {
+		margin: -1px;
+		overflow: hidden;
+	}
+
+	&__nogap-col {
+		padding: 1px;
+	}
 }

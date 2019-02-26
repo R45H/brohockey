@@ -225,6 +225,7 @@ include ../mixins/slider
 	include ../components/slider-single
 
 .container
+
 	.row
 		.col-6.mb-30
 			+slider(slider)
@@ -234,3 +235,41 @@ include ../mixins/slider
 			+slider(slider)(dataCols='2')
 		.col-6.mb-30
 			+slider(slider)(dataRows='2' dataCols='2')
+
+	.row.main__nogap-row
+		.col-6.main__nogap-col
+			+banner({
+				link: 'img/content/banner.jpg',
+				img: 'img/content/banner.jpg',
+				zoom: {
+					group: 'group-3',
+					title: 'Banner'
+				}
+			})
+		.col-6.main__nogap-col
+			+banner({
+				link: 'img/content/banner.jpg',
+				img: 'img/content/banner.jpg',
+				zoom: {
+					group: 'group-3',
+					title: 'Banner'
+				}
+			})
+		.col-6.main__nogap-col
+			+banner({
+				link: 'img/content/banner.jpg',
+				img: 'img/content/banner.jpg',
+				zoom: {
+					group: 'group-3',
+					title: 'Banner'
+				}
+			})
+		.col-6.main__nogap-col
+			+banner({
+				link: 'img/content/banner.jpg',
+				img: 'img/content/banner.jpg',
+				zoom: {
+					group: 'group-3',
+					title: 'Banner'
+				}
+			})
