@@ -1,0 +1,7 @@
+mixin icon(data)
+	a.icon(
+		href= data.link
+		class= attributes.class
+	)
+		.icon__wrap
+			+svg(data.icon, 'icon__img')

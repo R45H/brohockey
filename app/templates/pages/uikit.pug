@@ -7,6 +7,7 @@ include ../mixins/growth
 include ../mixins/cost
 include ../mixins/slider
 include ../mixins/logo
+include ../mixins/icon
 
 .mb-30
 
@@ -290,3 +291,15 @@ include ../mixins/logo
 			+social(social)
 		.col-4.main__black
 			+social(social)(class='social_color_white')
+
+	.row.main__separator
+		.col-1
+			+icon({
+				link: '#',
+				icon: 'lk'
+			})
+		.col-1.main__black
+			+icon({
+				link: '#',
+				icon: 'lk'
+			})(class='icon_color_white')
