@@ -5,7 +5,7 @@ $name: btn;
 	display: inline-block;
 	position: relative;
 	font-family: $font-third;
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: normal;
 	color: $color-dark;
 	border: 1px solid $color-dark;
@@ -15,7 +15,7 @@ $name: btn;
 	cursor: pointer;
 	line-height: 1.2;
 	outline: none;
-	padding: 17px 40px 12px;
+	padding: 10px 30px 8px;
 	word-break: break-word;
 	user-select: none;
 
@@ -30,6 +30,16 @@ $name: btn;
 		color: white;
 		background-color: $color-text-light;
 		border-color: $color-text-light;
+	}
+
+	&_size_md {
+		font-size: 18px;
+		padding: 10px 35px 7px;
+	}
+
+	&_size_lg {
+		font-size: 18px;
+		padding: 16px 40px 12px;
 	}
 
 	&_wide {
