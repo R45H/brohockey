@@ -5,10 +5,18 @@ $name: title;
 	font-weight: normal;
 	line-height: 1.2;
 
+	@include screen-sm(max) {
+		font-size: 30px;
+	}
+
 	&_font_second {
 		font-family: $font-second;
 		font-size: 7.5rem;
 		font-weight: bold;
+
+		@include screen-sm(max) {
+			font-size: 5rem;
+		}
 
 		&.#{$name}_as_h2 {
 			font-size: 32px;
@@ -83,6 +91,25 @@ $name: title;
 			height: 1px;
 			background-color: currentColor;
 			margin-top: .2em;
+		}
+	}
+
+	&_line_around {
+		display: inline-flex;
+
+		&::before,
+		&::after {
+			content: '';
+			width: 1px;
+			background-color: currentColor;
+		}
+
+		&::before {
+			margin-right: .5em;
+		}
+
+		&::after {
+			margin-left: .5em;
 		}
 	}
 }
