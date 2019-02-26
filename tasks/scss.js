@@ -18,7 +18,10 @@ module.exports = function(options) {
 					sort: sortMqpacker
 				})
 			]))
-			.pipe($.if(options.prod, $.autoprefixer(['last 15 versions', '>1%'])))
+			.pipe($.if(options.prod, $.autoprefixer({
+				grid: true,
+				browsers: ['last 15 versions', '>1%']
+			})))
 			.pipe($.if(options.prod, $.cssbeautify({
 				indent: '\t'
 			})))
