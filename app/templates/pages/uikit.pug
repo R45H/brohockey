@@ -5,6 +5,7 @@ include ../mixins/opportunity
 include ../mixins/growth
 include ../mixins/cost
 include ../mixins/slider
+include ../mixins/logo
 
 .mb-30
 
@@ -226,7 +227,7 @@ include ../mixins/slider
 
 .container
 
-	.row
+	.row.main__separator
 		.col-6.mb-30
 			+slider(slider)
 		.col-6.mb-30
@@ -236,40 +237,49 @@ include ../mixins/slider
 		.col-6.mb-30
 			+slider(slider)(dataRows='2' dataCols='2')
 
-	.row.main__nogap-row
-		.col-6.main__nogap-col
-			+banner({
-				link: 'img/content/banner.jpg',
-				img: 'img/content/banner.jpg',
-				zoom: {
-					group: 'group-3',
-					title: 'Banner'
-				}
-			})
-		.col-6.main__nogap-col
-			+banner({
-				link: 'img/content/banner.jpg',
-				img: 'img/content/banner.jpg',
-				zoom: {
-					group: 'group-3',
-					title: 'Banner'
-				}
-			})
-		.col-6.main__nogap-col
-			+banner({
-				link: 'img/content/banner.jpg',
-				img: 'img/content/banner.jpg',
-				zoom: {
-					group: 'group-3',
-					title: 'Banner'
-				}
-			})
-		.col-6.main__nogap-col
-			+banner({
-				link: 'img/content/banner.jpg',
-				img: 'img/content/banner.jpg',
-				zoom: {
-					group: 'group-3',
-					title: 'Banner'
-				}
+	.main__separator
+		.row.main__nogap-row
+			.col-6.main__nogap-col
+				+banner({
+					link: 'img/content/banner.jpg',
+					img: 'img/content/banner.jpg',
+					zoom: {
+						group: 'group-3',
+						title: 'Banner'
+					}
+				})
+			.col-6.main__nogap-col
+				+banner({
+					link: 'img/content/banner.jpg',
+					img: 'img/content/banner.jpg',
+					zoom: {
+						group: 'group-3',
+						title: 'Banner'
+					}
+				})
+			.col-6.main__nogap-col
+				+banner({
+					link: 'img/content/banner.jpg',
+					img: 'img/content/banner.jpg',
+					zoom: {
+						group: 'group-3',
+						title: 'Banner'
+					}
+				})
+			.col-6.main__nogap-col
+				+banner({
+					link: 'img/content/banner.jpg',
+					img: 'img/content/banner.jpg',
+					zoom: {
+						group: 'group-3',
+						title: 'Banner'
+					}
+				})
+
+	.row.main__separator
+		.col-2.main__black
+			+logo
+		.col-2.main__black
+			+logo({
+				link: false
 			})
