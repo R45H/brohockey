@@ -1,0 +1,58 @@
+$name: menu;
+
+.#{$name} {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+
+	&__outer {
+		display: flex;
+		margin: 0 -15px;
+	}
+
+	&__side {
+		padding: 0 15px;
+
+		&_left {
+			width: calc(50% - 50px);
+		}
+
+		&_center {
+			width: 130px;
+			flex: none;
+		}
+
+		&_right {
+			width: calc(50% - 50px);
+		}
+	}
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		height: 100%;
+		list-style-type: none;
+		margin: 0 -15px;
+	}
+
+	&__item {
+		display: block;
+	}
+
+	&__link {
+		@extend %transition;
+		display: flex;
+		align-items: center;
+		height: 100%;
+		color: white;
+		padding: 5px 15px;
+
+		&:hover {
+			color: $color-gray;
+		}
+
+		&:active {
+			color: $color-light;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+include ../mixins/logo
+
+.menu
+
+	.menu__outer
+		.menu__side.menu__side_left
+			ul.menu__wrap
+
+				each val in menu.sideLeft
+					li.title.title_font_third.title_as_h4.upper.menu__item
+						a.menu__link(href= val.link)= val.name
+
+		.menu__side.menu__side_center
+			+logo({
+				link: page.link !== global.link
+			})
+
+		.menu__side.menu__side_right
+			ul.menu__wrap
+
+				each val in menu.sideRight
+					li.title.title_font_third.title_as_h4.upper.menu__item
+						a.menu__link(href= val.link)= val.name
