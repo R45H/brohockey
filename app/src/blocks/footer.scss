@@ -2,4 +2,19 @@ $name: footer;
 
 .#{$name} {
 	flex: 0 0 auto;
+	background: $color-dark;
+	font-size: 18px;
+
+	&__top {
+		padding: 15px 0;
+	}
+
+	&__bottom {
+		padding: 15px 0;
+		border-top: 1px solid $color-gray;
+	}
+
+	&__link {
+		display: block;
+	}
 }
