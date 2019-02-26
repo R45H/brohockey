@@ -1,0 +1,42 @@
+$name: growth;
+
+.#{$name} {
+	padding: 20px;
+	background: rgba($color-gray, .11);
+	height: 100%;
+	color: white;
+
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+
+		&::after {
+			content: '';
+			display: block;
+			width: 34px;
+			height: 1px;
+			background-color: currentColor;
+			margin: 15px auto 0;
+		}
+	}
+
+	&__icon-wrap {
+		flex: none;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		margin-bottom: 15px;
+	}
+
+	&__icon {
+		height: 80px;
+		width: auto;
+		fill: white;
+	}
+
+	&__title {
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+}

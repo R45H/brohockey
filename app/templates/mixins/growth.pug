@@ -1,0 +1,8 @@
+include svg
+
+mixin growth(data)
+	.growth
+		.growth__wrap
+			.growth__icon-wrap
+				+svg(data.icon, 'growth__icon')
+			.title.title_as_h2.text-center.growth__title= data.name

@@ -1,0 +1,16 @@
+{
+	"growth": [
+		{"name": "Твердость характера", "icon": "growth-hardness"},
+		{"name": "Гибкость", "icon": "growth-flexibility"},
+		{"name": "Силу", "icon": "growth-strength"},
+		{"name": "Ловкость", "icon": "growth-agility"},
+		{"name": "Быстроту", "icon": "growth-speed"},
+		{"name": "Игровое мышление", "icon": "growth-game-thinking"}
+	]
+}
+
+
+
+
+
+

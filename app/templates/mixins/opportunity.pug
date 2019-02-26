@@ -1,7 +1,7 @@
-include ../mixins/svg
+include svg
 
 mixin opportunity(data)
 	.opportunity
-		.opportunity__icon-wrap.mb-10
+		.opportunity__icon-wrap
 			+svg(data.icon, 'opportunity__icon')
 		.title.title_as_h2.opportunity__title= data.name

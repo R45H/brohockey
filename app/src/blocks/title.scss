@@ -3,6 +3,7 @@ $name: title;
 .#{$name} {
 	font-size: 35px;
 	font-weight: normal;
+	line-height: 1.2;
 
 	&_font_second {
 		font-family: $font-second;
