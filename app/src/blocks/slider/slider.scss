@@ -1,8 +1,13 @@
-$name: slider-single;
+$name: slider;
 
 .#{$name} {
 	overflow: hidden;
-	position: relative;
+	background: white;
+	padding: 0;
+
+	.slick-list {
+		margin: -1px;
+	}
 
 	.slick-slide {
 		outline: none;
@@ -13,36 +18,17 @@ $name: slider-single;
 	}
 
 	&__item {
-		background: no-repeat center / cover;
-		min-height: 100vh;
-	}
-
-	&__content-wrap {
-		min-height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		padding: calc(8rem + 38px) 15px;
-	}
-
-	&__img {
-		display: block;
-		background: no-repeat center / cover;
-		padding-bottom: 25%;
-		outline: none;
+		padding: 1px;
 	}
 
 	&__dots {
-		position: absolute;
-		bottom: 4rem;
-		left: 0;
 		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		list-style-type: none;
 		padding: 0 15px;
+		margin-top: 15px;
 	}
 
 	&__dot {
@@ -51,7 +37,7 @@ $name: slider-single;
 		height: 18px;
 		border-radius: 50%;
 		display: block;
-		background-color: $color-gray;
+		border: 1px solid $color-gray;
 	}
 
 	li {
@@ -65,7 +51,7 @@ $name: slider-single;
 				// =====
 
 				&__dot {
-					background-color: white;
+					background-color: $color-gray;
 				}
 			}
 		}
@@ -76,7 +62,8 @@ $name: slider-single;
 				// =====
 
 				&__dot {
-					background-color: $color-light;
+					border-color: $color-text-light;
+					background-color: $color-text-light;
 				}
 			}
 		}
@@ -87,7 +74,7 @@ $name: slider-single;
 				// =====
 
 				&__dot {
-					background-color: white;
+					background-color: $color-gray;
 				}
 			}
 
@@ -98,7 +85,8 @@ $name: slider-single;
 					// =====
 
 					&__dot {
-						background-color: white;
+						background-color: $color-text-light;
+						border-color: $color-text-light;
 					}
 				}
 			}
@@ -109,7 +97,7 @@ $name: slider-single;
 					// =====
 
 					&__dot {
-						background-color: white;
+						background-color: $color-text-light;
 					}
 				}
 			}

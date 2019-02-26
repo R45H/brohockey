@@ -4,6 +4,7 @@ include ../mixins/banner
 include ../mixins/opportunity
 include ../mixins/growth
 include ../mixins/cost
+include ../mixins/slider
 
 .mb-30
 
@@ -222,3 +223,14 @@ include ../mixins/cost
 
 .mb-30
 	include ../components/slider-single
+
+.container
+	.row
+		.col-6.mb-30
+			+slider(slider)
+		.col-6.mb-30
+			+slider(slider)(dataRows='2')
+		.col-6.mb-30
+			+slider(slider)(dataCols='2')
+		.col-6.mb-30
+			+slider(slider)(dataRows='2' dataCols='2')
