@@ -1,0 +1,20 @@
+{
+	"banner_02": [
+		{
+			"img": "img/content/banner/02/01.jpg",
+			"title": "Всем видам катания"
+		},
+		{
+			"img": "img/content/banner/02/02.jpg",
+			"title": "Всем видам бросков"
+		},
+		{
+			"img": "img/content/banner/02/03.jpg",
+			"title": "Контролю шайбы"
+		},
+		{
+			"img": "img/content/banner/02/04.jpg",
+			"title": "Владению клюшкой"
+		}
+	]
+}

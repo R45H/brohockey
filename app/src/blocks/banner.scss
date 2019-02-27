@@ -184,4 +184,14 @@ $name: banner;
 			}
 		}
 	}
+
+	&_space_2x {
+
+		.#{$name} {
+
+			&__content-wrap {
+				padding: 30px;
+			}
+		}
+	}
 }

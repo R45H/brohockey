@@ -1,0 +1,14 @@
+{
+	"banner": [
+		{
+			"link": "#",
+			"img": "img/content/banner/01/01.jpg",
+			"title": "Дмитрий Казионов"
+		},
+		{
+			"link": "#",
+			"img": "img/content/banner/01/02.jpg",
+			"title": "Денис Казионов"
+		}
+	]
+}

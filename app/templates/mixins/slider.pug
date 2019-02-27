@@ -19,10 +19,11 @@ mixin slider(data)
 		each val in data
 			.slider__item
 				+banner({
-					link: val.img,
+					link: val.link || val.img,
 					img: val.img,
 					zoom: {
 						group: 'group-slider-' + randomNumber,
 						title: 'Banner'
-					}
-				})
+					},
+					video: val.video
+				})(class='banner_fog')

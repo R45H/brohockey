@@ -1,0 +1,53 @@
+$name: tab;
+
+.#{$name} {
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: -15px;
+		overflow: hidden;
+	}
+
+	&__link {
+		@extend %transition;
+		margin: 0 30px 15px;
+		color: $color-gray;
+		font-size: 18px;
+		text-transform: uppercase;
+		font-family: $font-third;
+		border-bottom: 2px solid transparent;
+
+		&:hover {
+			color: $color-text;
+		}
+
+		&:active {
+			color: $color-text-light;
+		}
+
+		&_active {
+			color: $color-text;
+			border-bottom-color: currentColor;
+			cursor: default;
+
+			&:hover,
+			&:active {
+				color: $color-text;
+			}
+		}
+	}
+
+	&__body {
+
+	}
+
+	&__panel {
+		display: none;
+
+		&_active {
+			display: block;
+		}
+	}
+}

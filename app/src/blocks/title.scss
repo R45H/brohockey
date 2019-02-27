@@ -5,10 +5,6 @@ $name: title;
 	font-weight: normal;
 	line-height: 1.2;
 
-	@include screen-sm(max) {
-		font-size: 30px;
-	}
-
 	&_font_second {
 		font-family: $font-second;
 		font-size: 7.5rem;

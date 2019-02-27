@@ -1,0 +1,126 @@
+include ../components/cost-wrap
+include ../mixins/banner
+include ../mixins/opportunity
+include ../mixins/growth
+include ../mixins/slider
+
+.section.section_space_none.section_up
+	include ../components/slider-single
+
+.section.section_space_none
+	.row.no-gutters
+
+		each val in banner
+			.col-md-6
+				+banner({
+					link: val.link,
+					img: val.img,
+					moreLink: true
+				})(class='banner_align_right banner_valign_top banner_space_2x')
+					.title.title_font_second.title_as_h2.upper.mb-5= val.title
+					.title.title_as_h2 Основатель школы
+
+.section.section_bg_light
+	.container
+		.title.title_font_second.title_as_h2.upper.text-center.mb-30 Наши возможности
+		.row.mb-neg-30
+
+			each val in opportunity
+				.col-md-6.col-lg-4.mb-30
+					+opportunity(val)
+
+.section
+	.container
+		.title.title_font_second.title_as_h2.upper.text-center.mb-30 Обучаем
+		.row.main__nogap-row
+
+			each val in banner_02
+				.col-md-6.main__nogap-col
+					+banner({
+						img: val.img
+					})(class='banner_fog')
+						.title.title_font_third.title_line_after.text-center.upper= val.title
+
+.section.section_bg_dark(style='background-image: url(img/icons/skates.png);')
+	.container
+		.title.title_font_second.title_as_h2.upper.text-center.color-white.mb-30 Развиваем
+		.row.justify-content-center.mb-neg-15.mb-neg-sm-30
+
+			each val in growth
+				.col-sm-6.col-md-4.col-lg-3.col-xl-2.mb-15.mb-sm-30
+					+growth(val)
+
+.section.section_bg_light
+	.container
+		.title.title_font_second.title_as_h2.upper.text-center.mb-30 Стоимость обучения
+		+cost-wrap
+
+.section
+	.container
+		.title.title_font_second.title_as_h2.upper.text-center.mb-30 Галерея
+
+		.tab
+			.tab__header.mb-30
+				a.tab__link.tab__link_active(href='#' data-tab-link='link-1') Фото
+				a.tab__link(href='#' data-tab-link='link-2') Видео
+			.tab__body
+				.tab__panel.tab__panel_active(data-tab-target='link-1')
+					+slider(slider)(dataSmRows='2' dataSmCols='2')
+				.tab__panel(data-tab-target='link-2')
+					+slider(slider_02)(dataSmRows='2' dataSmCols='2')
+
+.section.section_bg_light
+	.container
+		.row.align-items-baseline.mb-20
+			.col-sm-6.col-md-4.offset-md-4.text-center.text-sm-left.text-md-center.mb-10
+				.title.title_font_second.title_as_h2.upper Новости
+			.col-sm-6.col-md-4.text-center.text-sm-right.mb-10
+				a.link(href='#') К списку новостей >
+
+		.row.main__nogap-row
+
+			each val in banner_03
+				.col-sm-6.col-lg-4.main__nogap-col
+					+banner({
+						link: '#',
+						img: val.img,
+						moreLink: true
+					})(class='banner_fog')
+						.title.title_font_second.title_as_h4.upper= val.title
+
+.section.section_fog_dark(style='background-image: url(img/content/section/01.jpg);')
+	.container.text-center
+		.title.title_font_second.title_as_h2.upper.color-white.mb-30 Контакты
+		.row.justify-content-center.mb-neg-30
+			.col-lg-10.col-xl-8
+				.title.title_as_h2.color-gray.mb-30 Хоккейный Центр «Мой Каток», Москва, Ул. Двинцев, д.3 (М. Cавеловская)
+					br
+					| Академия Льда, Москва, 1-й Стрелецкий пр-д, 14
+				.title.title_font_third.title_as_h2.color-white.mb-30
+					a.link.color-white(href='tel:+79852322232') +7 985 232 22 32
+					| ,
+					|
+					|
+					a.link.color-white(href='mailto:info@brohockey.ru') info@brohockey.ru
+				.title.title_as_h2.color-gray.mb-30 Время работы: будни: 7:00 — 23:00, выходные: 9:00 — 23:00
+
+.section.section_bg_dark
+	.container
+
+		.row.justify-content-center
+			.col-lg-8.col-xl-6
+				.title.title_font_second.title_as_h4.upper.text-center.color-white.mb-30 Вы можете задать любой интересующий вас вопрос нашим менеджерам через данную форму:
+
+		.row.justify-content-center.mb-neg-30
+			.col-sm-8.col-md-6.col-lg-5.col-xl-4
+				form
+					.mb-30
+						input.input.input_color_white(type='text' placeholder='Имя')
+					.mb-30
+						input.input.input_color_white(type='text' placeholder='E-mail')
+					.mb-30
+						input.input.input_color_white.input_tel(type='tel' placeholder='Телефон')
+					.mb-30
+						textarea.input.input_color_white(placeholder='Сообщение')
+					.mb-30.text-center
+						input.btn.btn_size_md.btn_color_white(type='button' value='Отправить')

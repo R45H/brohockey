@@ -1,6 +1,10 @@
+include global
+
 mixin banner(data)
-	a.banner(
+
+	+g-tag((data && data.link) ? 'a' : '')(
 		href= data.link
+		class='banner'
 		class= attributes.class
 		class= data.moreLink ? 'banner_has_more-link' : ''
 		class= data.zoom ? 'banner_zoom' : ''
