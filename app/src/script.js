@@ -20,6 +20,9 @@ $(function() {
 	(function() {
 		//=require 'blocks/tab/tab.js'
 	}());
+	(function() {
+		//=require 'blocks/scroll.js'
+	}());
 	/* Blocks will be inserted here */
 });
 

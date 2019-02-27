@@ -1,15 +1,43 @@
 {
 	"menu": {
 		"sideLeft": [
-			{"link": "#", "name": "Тренеры"},
-			{"link": "#", "name": "Наши возможности"},
-			{"link": "#", "name": "О школе"}
+			{
+				"link": "#section2",
+				"name": "Тренеры",
+				"anchor": true
+			},
+			{
+				"link": "#section3",
+				"name": "Наши возможности",
+				"anchor": true
+			},
+			{
+				"link": "#section4",
+				"name": "О школе",
+				"anchor": true
+			}
 		],
 		"sideRight": [
-			{"link": "#", "name": "Стоимость"},
-			{"link": "#", "name": "Галерея"},
-			{"link": "#", "name": "Новости"},
-			{"link": "#", "name": "Контакты"}
+			{
+				"link": "#section6",
+				"name": "Стоимость",
+				"anchor": true
+			},
+			{
+				"link": "#section7",
+				"name": "Галерея",
+				"anchor": true
+			},
+			{
+				"link": "#section8",
+				"name": "Новости",
+				"anchor": true
+			},
+			{
+				"link": "#section9",
+				"name": "Контакты",
+				"anchor": true
+			}
 		]
 	}
 }
