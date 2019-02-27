@@ -21,11 +21,12 @@
 @import 'blocks/social'; // Социальные иконки
 @import 'blocks/icon'; // Иконка
 @import 'blocks/menu'; // Основное меню
+@import 'blocks/toggle/toggle'; // Гамбургер
 /* Blocks will be inserted here */
 // =====
 
 // Внешние контейнеры
-@import 'blocks/header'; // Шапка
+@import 'blocks/header/header'; // Шапка
 @import 'blocks/footer'; // Подвал
 @import 'blocks/section'; // Секция контента
 @import 'blocks/main'; // Контейнер контента

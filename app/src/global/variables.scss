@@ -16,7 +16,8 @@ $font-fa: 'FontAwesome', sans-serif;
 
 $duration: .3s;
 
-$header-space: 0;
+$header-space: 40px;
+$header-space-lg: 170px;
 
 %transition {
 	transition: $duration / 2 ease;

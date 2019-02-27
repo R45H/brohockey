@@ -1,5 +1,7 @@
 include ../components/cost-wrap
 include ../components/social
+include ../components/menu
+include ../components/toggle
 include ../mixins/radio
 include ../mixins/banner
 include ../mixins/opportunity
@@ -8,8 +10,6 @@ include ../mixins/cost
 include ../mixins/slider
 include ../mixins/logo
 include ../mixins/icon
-
-.mb-30
 
 .container
 
@@ -279,9 +279,11 @@ include ../mixins/icon
 				})
 
 	.row.main__separator
-		.col-2.main__black
+		.col-2
 			+logo
 		.col-2.main__black
+			+logo(class='logo_color_white')
+		.col-2
 			+logo({
 				link: false
 			})
@@ -305,5 +307,17 @@ include ../mixins/icon
 			})(class='icon_color_white')
 
 	.row.main__separator
-		.col-12.main__black
-			include ../components/menu
+		.col-12.mb-15
+			+menu
+		.col-12.mb-15.main__black
+			+menu({
+				colorWhite: true
+			})
+		.col-12.mb-15
+			+menu(class='menu_size_sm')
+
+	.row.main__separator
+		.col-1
+			+toggle
+		.col-1.main__black
+			+toggle(class='toggle_color_white')

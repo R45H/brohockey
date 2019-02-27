@@ -5,4 +5,8 @@ $name: wrapper;
 	flex-direction: column;
 	min-height: 100%;
 	padding-top: $header-space;
+
+	@include screen-lg() {
+		padding-top: $header-space-lg;
+	}
 }

@@ -14,7 +14,7 @@ $name: slider-single;
 
 	&__item {
 		background: no-repeat center / cover;
-		min-height: 100vh;
+		min-height: calc(100vh - 40px);
 	}
 
 	&__content-wrap {
@@ -23,7 +23,11 @@ $name: slider-single;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		padding: calc(8rem + 38px) 15px;
+		padding: calc(6rem + 38px) 15px;
+
+		@include screen-lg() {
+			padding-top: $header-space-lg - 40;
+		}
 	}
 
 	&__img {
@@ -35,7 +39,7 @@ $name: slider-single;
 
 	&__dots {
 		position: absolute;
-		bottom: 4rem;
+		bottom: 3rem;
 		left: 0;
 		width: 100%;
 		display: flex;

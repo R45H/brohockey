@@ -18,6 +18,7 @@ $name: menu;
 		}
 
 		&_center {
+			@extend %transition;
 			width: 130px;
 			flex: none;
 		}
@@ -44,15 +45,47 @@ $name: menu;
 		display: flex;
 		align-items: center;
 		height: 100%;
-		color: white;
-		padding: 5px 15px;
+		color: $color-text;
+		padding: 8px 15px 4px;
 
 		&:hover {
 			color: $color-gray;
 		}
 
 		&:active {
-			color: $color-light;
+			color: $color-text-light;
+		}
+	}
+
+	&_color_white {
+
+		.#{$name} {
+
+			&__link {
+				color: white;
+
+				&:hover {
+					color: $color-gray;
+				}
+
+				&:active {
+					color: $color-light;
+				}
+			}
+		}
+	}
+
+	&_size_sm {
+
+		.#{$name} {
+
+			&__side {
+
+				&_center {
+					width: 110px;
+					padding: 0 30px;
+				}
+			}
 		}
 	}
 }

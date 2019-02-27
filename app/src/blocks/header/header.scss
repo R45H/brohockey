@@ -1,0 +1,115 @@
+$name: header;
+
+.#{$name} {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+	transform: translate3d(0, 0, 0);
+
+	&__top {
+		background: $color-dark;
+	}
+
+	&__bottom {
+		@extend %transition;
+		background: $color-text;
+		padding: 15px 0;
+	}
+
+	&__wrap {
+
+		@include screen-lg(max) {
+			padding: 0;
+		}
+	}
+
+	&__link {
+		padding-top: 12px;
+		display: block;
+		padding-bottom: 7px;
+		max-height: 40px;
+	}
+
+	&__icons-wrap {
+		display: flex;
+		align-items: center;
+	}
+
+	&__icon-wrap {
+		width: 40px;
+		height: 40px;
+		flex: none;
+
+		@include screen-lg() {
+			position: relative;
+			margin-left: 40px;
+		}
+
+		&::before {
+
+			@include screen-lg() {
+				content: '';
+				width: 1px;
+				height: 20px;
+				background: $color-gray;
+				position: absolute;
+				left: -20px;
+				top: 10px;
+			}
+		}
+	}
+
+	&__icon {
+		padding: 12px;
+	}
+
+	&__mobile-logo-wrap {
+		width: 70px;
+		height: 40px;
+	}
+
+	&__mobile-logo {
+		padding: 5px;
+	}
+
+	&__mobile-left-icon {
+
+		@include screen-lg(max) {
+			padding: 10px 15px;
+			width: 50px;
+		}
+	}
+
+	&__mobile-right-icon {
+
+		@include screen-lg(max) {
+			padding-right: 15px;
+			padding-left: 11px;
+			width: 50px;
+		}
+	}
+
+	&_bg_none {
+
+		.#{$name} {
+
+			&__bottom {
+				background: transparent;
+			}
+		}
+	}
+
+	&_pinned {
+
+		.#{$name} {
+
+			&__bottom {
+				background: white;
+				padding: 7px 0;
+				border: 1px solid $color-light;
+			}
+		}
+	}
+}

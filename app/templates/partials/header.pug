@@ -1,2 +1,39 @@
+include ../components/social
+include ../components/menu
+include ../components/toggle
+include ../mixins/icon
+include ../mixins/logo
+
 // HEADER
-header.header
+header.header(class= page.headerTransparent ? 'header_bg_none' : '')
+
+	.header__top
+		.container.header__wrap
+			.row.justify-content-between.align-items-center
+
+				.col-auto.d-none.d-lg-block
+					.title.title_font_second.title_as_h5
+						a.link.link_color_white.header__link(href='tel:+79852322232') +7 (985) 232-22-32
+
+				.col-auto
+					.header__icons-wrap
+						+social(social)(class='social_color_white d-none d-lg-block')
+						.header__icon-wrap
+							+icon({
+								link: '#',
+								icon: 'lk'
+							})(class='icon_color_white header__icon header__mobile-left-icon')
+
+				.col-auto.d-lg-none.header__mobile-logo-wrap
+					+logo({
+						link: page.link !== global.link_home
+					})(class='logo_color_white header__mobile-logo')
+
+				.col-auto.d-lg-none
+					+toggle(class='toggle_color_white header__mobile-right-icon')
+
+	.header__bottom.d-none.d-lg-block
+		.container
+			+menu({
+				colorWhite: true
+			})

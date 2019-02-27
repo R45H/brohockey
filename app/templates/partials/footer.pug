@@ -1,9 +1,13 @@
+include ../components/menu
+
 // FOOTER
 footer.footer
 
 	.footer__top.d-none.d-lg-block
 		.container
-			include ../components/menu
+			+menu({
+				colorWhite: true
+			})
 
 	.footer__bottom
 		.container
