@@ -14,3 +14,5 @@ $(document).on('click', 'a', function(event) {
 });
 
 svg4everybody();
+
+new WOW().init();

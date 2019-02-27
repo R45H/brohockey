@@ -3,6 +3,7 @@ $name: section;
 .#{$name} {
 	padding: 6rem 0;
 	background: no-repeat center / cover;
+	overflow: hidden;
 
 	&_space_none {
 		padding: 0;

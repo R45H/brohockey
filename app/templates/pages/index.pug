@@ -21,7 +21,7 @@ include ../mixins/slider
 					.title.title_as_h2 Основатель школы
 
 .section.section_bg_light
-	.container
+	.container.wow.fadeInUp(data-wow-duration="2.2s")
 		.title.title_font_second.title_as_h2.upper.text-center.mb-30 Наши возможности
 		.row.mb-neg-30
 
@@ -30,7 +30,7 @@ include ../mixins/slider
 					+opportunity(val)
 
 .section
-	.container
+	.container.wow.fadeInUp(data-wow-duration="2.2s")
 		.title.title_font_second.title_as_h2.upper.text-center.mb-30 Обучаем
 		.row.main__nogap-row
 
@@ -42,7 +42,7 @@ include ../mixins/slider
 						.title.title_font_third.title_line_after.text-center.upper= val.title
 
 .section.section_bg_dark(style='background-image: url(img/icons/skates.png);')
-	.container
+	.container.wow.fadeInUp(data-wow-duration="2.2s")
 		.title.title_font_second.title_as_h2.upper.text-center.color-white.mb-30 Развиваем
 		.row.justify-content-center.mb-neg-15.mb-neg-sm-30
 
@@ -51,12 +51,12 @@ include ../mixins/slider
 					+growth(val)
 
 .section.section_bg_light
-	.container
+	.container.wow.fadeInUp(data-wow-duration="2.2s")
 		.title.title_font_second.title_as_h2.upper.text-center.mb-30 Стоимость обучения
 		+cost-wrap
 
 .section
-	.container
+	.container.wow.fadeInUp(data-wow-duration="2.2s")
 		.title.title_font_second.title_as_h2.upper.text-center.mb-30 Галерея
 
 		.tab
@@ -70,7 +70,7 @@ include ../mixins/slider
 					+slider(slider_02)(dataSmRows='2' dataSmCols='2')
 
 .section.section_bg_light
-	.container
+	.container.wow.fadeInUp(data-wow-duration="2.2s")
 		.row.align-items-baseline.mb-20
 			.col-sm-6.col-md-4.offset-md-4.text-center.text-sm-left.text-md-center.mb-10
 				.title.title_font_second.title_as_h2.upper Новости
@@ -89,7 +89,7 @@ include ../mixins/slider
 						.title.title_font_second.title_as_h4.upper= val.title
 
 .section.section_fog_dark(style='background-image: url(img/content/section/01.jpg);')
-	.container.text-center
+	.container.text-center.wow.fadeInUp(data-wow-duration="2.2s")
 		.title.title_font_second.title_as_h2.upper.color-white.mb-30 Контакты
 		.row.justify-content-center.mb-neg-30
 			.col-lg-10.col-xl-8
@@ -105,7 +105,7 @@ include ../mixins/slider
 				.title.title_as_h2.color-gray.mb-30 Время работы: будни: 7:00 — 23:00, выходные: 9:00 — 23:00
 
 .section.section_bg_dark
-	.container
+	.container.wow.fadeInUp(data-wow-duration="2.2s")
 
 		.row.justify-content-center
 			.col-lg-8.col-xl-6

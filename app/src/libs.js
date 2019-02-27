@@ -3,3 +3,4 @@
 //=require '../libs/svg4everybody/dist/svg4everybody.js'
 //=require '../libs/jquery.maskedinput/dist/jquery.maskedinput.js'
 //=require '../libs/fancybox/dist/jquery.fancybox.js'
+//=require '../libs/wow/dist/wow.js'
