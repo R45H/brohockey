@@ -5,22 +5,25 @@ var
 	classHeaderPinned = 'header_pinned',
 	classMenuWhite = 'menu_color_white',
 	classMenuSm = 'menu_size_sm',
-	classLogoWhite = 'logo_color_white';
+	classLogoWhite = 'logo_color_white',
+	updateHeader = function() {
+		var scrollTop = $(window).scrollTop();
 
-$(window).on('scroll resize', function() {
-	var scrollTop = $(window).scrollTop();
+		if (scrollTop) {
+			$header.addClass(classHeaderPinned);
+			$menu
+				.removeClass(classMenuWhite)
+				.addClass(classMenuSm);
+			$logo.removeClass(classLogoWhite);
+		} else {
+			$header.removeClass(classHeaderPinned);
+			$menu
+				.addClass(classMenuWhite)
+				.removeClass(classMenuSm);
+			$logo.addClass(classLogoWhite);
+		}
+	};
 
-	if (scrollTop) {
-		$header.addClass(classHeaderPinned);
-		$menu
-			.removeClass(classMenuWhite)
-			.addClass(classMenuSm);
-		$logo.removeClass(classLogoWhite);
-	} else {
-		$header.removeClass(classHeaderPinned);
-		$menu
-			.addClass(classMenuWhite)
-			.removeClass(classMenuSm);
-		$logo.addClass(classLogoWhite);
-	}
-});
+updateHeader();
+
+$(window).on('scroll resize', updateHeader);

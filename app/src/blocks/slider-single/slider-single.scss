@@ -24,6 +24,7 @@ $name: slider-single;
 		align-items: center;
 		text-align: center;
 		padding: calc(6rem + 38px) 15px;
+		background: no-repeat center / cover;
 
 		@include screen-lg() {
 			padding-top: $header-space-lg - 40;
