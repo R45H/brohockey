@@ -1,0 +1,11 @@
+// ASIDE
+aside.aside
+
+	ul.aside__list
+
+		each side in [menu.sideLeft, menu.sideRight]
+
+			each val in side
+
+				li.title.title_font_third.title_as_h2.upper.aside__item
+					a.link.link_color_white.aside__link(href= val.link)= val.name

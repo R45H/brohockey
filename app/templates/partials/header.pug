@@ -22,7 +22,10 @@ header.header(class= page.headerTransparent ? 'header_bg_none' : '')
 							+icon({
 								link: '#',
 								icon: 'lk'
-							})(class='icon_color_white header__icon header__mobile-left-icon')
+							})(
+								class='icon_color_white header__icon header__mobile-left-icon'
+								dataModal='modal'
+							)
 
 				.col-auto.d-lg-none.header__mobile-logo-wrap
 					+logo({
@@ -30,7 +33,7 @@ header.header(class= page.headerTransparent ? 'header_bg_none' : '')
 					})(class='logo_color_white header__mobile-logo')
 
 				.col-auto.d-lg-none
-					+toggle(class='toggle_color_white header__mobile-right-icon')
+					+toggle(class='toggle_color_white header__mobile-right-icon js-aside__toggle header__toggle')
 
 	.header__bottom.d-none.d-lg-block
 		.container

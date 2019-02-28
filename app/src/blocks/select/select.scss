@@ -1,0 +1,165 @@
+$name: select;
+
+.#{$name} {
+	display: inline-block;
+	max-width: 100%;
+
+	&__current {
+		@extend .btn;
+		max-width: 100%;
+		fill: currentColor;
+		outline: none;
+		padding-left: 20px;
+		padding-right: 51px;
+		margin: 0;
+		appearance: none;
+
+		&_active {
+			border-bottom-color: transparent;
+			background: white;
+
+			&::before {
+				display: block;
+			}
+
+			&:hover,
+			&:focus {
+				color: white;
+			}
+
+			.#{$name} {
+				// =====
+
+				&__icon {
+					transform: rotate(180deg);
+				}
+			}
+		}
+
+		&.ui-button {
+			width: auto;
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		width: 11px;
+		height: 11px;
+		margin-top: -5px;
+		transition: transform $duration / 2 ease;
+	}
+
+	&__text {
+		margin: 0;
+	}
+
+	&__list {
+		z-index: 150;
+		border: 0;
+		background: white;
+		font-family: $font-third;
+		font-size: 14px;
+
+		.ui-menu {
+			list-style-type: none;
+			padding: 0;
+			margin: -1px 0 0;
+			color: $color-text;
+			border: 1px solid;
+			border-top: none;
+			max-height: 316px;
+			position: relative;
+			outline: none;
+		}
+
+		.ui-menu-item {
+
+			&:first-child {
+
+				.ui-menu-item-wrapper {
+					padding-top: 10px;
+				}
+			}
+
+			&:last-child {
+
+				.ui-menu-item-wrapper {
+					padding-bottom: 10px;
+				}
+			}
+		}
+
+		.ui-state-disabled {
+
+			.ui-menu-item-wrapper {
+				outline: none;
+				color: $color-gray;
+				cursor: default;
+				user-select: none;
+
+				&.ui-state-active,
+				&:active {
+					color: $color-gray;
+				}
+			}
+		}
+
+		.ui-menu-item-wrapper {
+			@extend %transition;
+			cursor: pointer;
+			padding: 5px 20px;
+			font-weight: 400;
+
+			&.ui-state-active {
+				color: $color-gray;
+			}
+
+			&:active {
+				color: $color-gray;
+			}
+		}
+
+		&_size_md {
+			font-size: 18px;
+		}
+
+		&_size_lg {
+			font-size: 18px;
+		}
+	}
+
+	&_wide {
+		display: block;
+
+		.#{$name} {
+
+			&__current {
+				width: 100%;
+			}
+		}
+	}
+
+	&_size_md {
+
+		.#{$name} {
+
+			&__current {
+				font-size: 18px;
+				padding: 10px 51px 7px 20px;
+			}
+		}
+	}
+
+	&_size_lg {
+
+		.#{$name} {
+
+			&__current {
+				font-size: 18px;
+				padding: 16px 51px 12px 20px;
+			}
+		}
+	}
+}

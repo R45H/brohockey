@@ -13,9 +13,10 @@ $name: header;
 	}
 
 	&__bottom {
-		@extend %transition;
+		transition: $duration / 2 ease all, 0s padding-right;
 		background: $color-text;
 		padding: 15px 0;
+		border: 1px solid transparent;
 	}
 
 	&__wrap {
@@ -108,7 +109,7 @@ $name: header;
 			&__bottom {
 				background: white;
 				padding: 7px 0;
-				border: 1px solid $color-light;
+				border-color: $color-light;
 			}
 		}
 	}

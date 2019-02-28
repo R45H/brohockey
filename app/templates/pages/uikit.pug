@@ -3,6 +3,8 @@ include ../components/social
 include ../components/menu
 include ../components/toggle
 include ../mixins/radio
+include ../mixins/check
+include ../mixins/select
 include ../mixins/banner
 include ../mixins/opportunity
 include ../mixins/growth
@@ -110,10 +112,36 @@ include ../mixins/icon
 			input.input(type='text' placeholder='.input')
 		.col-3.mb-30
 			input.input.input_tel(type='tel' placeholder='.input.input_tel')
+		.col-3.mb-30
+			input.input.input_date(type='text' placeholder='.input.input_date')
+		.col-3.mb-30
+			input.input.input_number(type='text' placeholder='.input.input_number')
 		.col-3.mb-30.main__black
 			input.input.input_color_white(type='tel' placeholder='.input.input_color_white')
 		.col-3.mb-30
 			textarea.input(placeholder='textarea.input')
+
+	.row.main__separator
+		.col-3
+			+select([
+				'Значение 1',
+				'Значение 2'
+			])
+		.col-3
+			+select([
+				'Значение 1',
+				'Значение 2'
+			])(class='select_wide')
+		.col-3
+			+select([
+				'Значение 1',
+				'Значение 2'
+			])(class='select_size_md')
+		.col-3
+			+select([
+				'Значение 1',
+				'Значение 2'
+			])(class='select_size_lg')
 
 	.row.main__separator
 		.col-3.mb-30
@@ -134,6 +162,18 @@ include ../mixins/icon
 					{text: '.radio_color_white'}
 				]
 			})(class='radio_color_white')
+
+	.row.main__separator
+		.col-3.mb-30
+			+check({
+				id: 'check-1',
+				text: '.check'
+			})
+		.col-3.mb-30.main__black
+			+check({
+				id: 'check-2',
+				text: '.check.check_color_white'
+			})(class='check_color_white')
 
 	.row.main__separator
 
@@ -329,3 +369,16 @@ include ../mixins/icon
 			+toggle
 		.col-1.main__black
 			+toggle(class='toggle_color_white')
+
+	.row.main__separator
+		.col-4
+			.tab-slide
+				.tab-slide__item(data-tab-slide-target='tabSlide1')
+					a.tab-slide__link(href='#' data-tab-slide-link='tabSlide2') .tab-slide LinkTo2
+					a.tab-slide__link(href='#' data-tab-slide-link='tabSlide3') .tab-slide LinkTo3
+				.tab-slide__item.tab-slide__item_hidden(data-tab-slide-target='tabSlide2')
+					a.tab-slide__link(href='#' data-tab-slide-link='tabSlide1') .tab-slide LinkTo1
+					a.tab-slide__link(href='#' data-tab-slide-link='tabSlide3') .tab-slide LinkTo3
+				.tab-slide__item.tab-slide__item_hidden(data-tab-slide-target='tabSlide3')
+					a.tab-slide__link(href='#' data-tab-slide-link='tabSlide1') .tab-slide LinkTo1
+					a.tab-slide__link(href='#' data-tab-slide-link='tabSlide2') .tab-slide LinkTo2

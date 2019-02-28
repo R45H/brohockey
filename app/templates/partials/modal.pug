@@ -1,0 +1,121 @@
+include ../mixins/icon
+include ../mixins/check
+include ../mixins/select
+
+#modal.modal
+	.modal__wrap
+
+		+icon({
+			link: '#',
+			icon: 'close'
+		})(
+			class='modal__close'
+			dataModalClose
+		)
+
+		.tab-slide
+
+			.tab-slide__item(data-tab-slide-target='tabModalEnter')
+				.modal__head
+					.title.title_font_second.title_as_h2.upper.modal__title Войти в личный кабинет
+				.modal__body
+					form.text-center
+						.row.justify-content-center
+							.col-sm-7
+								.mb-30
+									input.input(type='tel' placeholder='Телефон')
+								.mb-30
+									input.input(type='password' placeholder='Пароль')
+								.mb-20
+									input.btn.btn_size_md(type='button' value='Войти')
+							.col-sm-10
+								.mb-15
+									a.link.link_line.tab-slide__link(href='#' data-tab-slide-link='tabModalForgotPassword') Забыли пароль?
+								.color-gray Если у вас еще нет пароля для входа на сайт, вам нужно
+									|
+									|
+									a.link.link_line.tab-slide__link(href='#' data-tab-slide-link='tabModalRegistrationStep1') Зарегистрироваться
+
+			.tab-slide__item.tab-slide__item_hidden(data-tab-slide-target='tabModalForgotPassword')
+				.modal__head
+					.title.title_font_second.title_as_h2.upper.modal__title Восстановление пароля
+				.modal__body
+					form.text-center
+						.row.justify-content-center
+							.col-sm-7
+								.mb-30
+									input.input(type='tel' placeholder='Телефон')
+								.mb-20
+									input.btn.btn_size_md(type='button' value='Отправить СМС')
+							.col-sm-10
+								.color-gray Нет аккаунта?
+								div
+									a.link.link_line.tab-slide__link(href='#' data-tab-slide-link='tabModalRegistrationStep1') Зарегистрируйтесь
+
+			.tab-slide__item.tab-slide__item_hidden(data-tab-slide-target='tabModalRegistrationStep1')
+				.modal__head
+					.title.title_font_second.title_as_h2.upper.modal__title Зарегистрироваться
+				.modal__body
+					form.text-center
+						.row.justify-content-center
+							.col-sm-7
+								.mb-30
+									input.input(type='tel' placeholder='Телефон')
+								.mb-20
+									input.btn.btn_size_md.tab-slide__link(type='button' value='Отправить СМС' data-tab-slide-link='tabModalRegistrationStep2')
+							.col-sm-10
+								.color-gray Уже есть аккаунт?
+								div
+									a.link.link_line.tab-slide__link(href='#' data-tab-slide-link='tabModalEnter') Войдите
+
+			.tab-slide__item.tab-slide__item_hidden(data-tab-slide-target='tabModalRegistrationStep2')
+				.modal__head
+					.title.title_font_second.title_as_h2.upper.modal__title Зарегистрироваться
+				.modal__body
+					form
+						.row.justify-content-center
+							.col-sm-9
+								.mb-30
+									input.input(type='text' placeholder='Фамилия игрока')
+								.mb-30
+									input.input(type='text' placeholder='Имя')
+								.mb-30
+									input.input(type='text' placeholder='Отчество')
+								.mb-30
+									.row.align-items-end
+										.col-6
+											input.input.input_date(type='text' placeholder='Дата рождения')
+										.col-6
+											+select([
+												'Мужской',
+												'Женский'
+											])(class='select_size_md select_wide')
+								.mb-30
+									.row
+										.col-6
+											input.input.input_number(type='text' placeholder='Серия')
+										.col-6
+											input.input.input_number(type='text' placeholder='Номер')
+								.mb-30
+									input.input.input_date(type='text' placeholder='Дата выдачи')
+								.mb-30
+									input.input(type='text' placeholder='Место выдачи')
+								.mb-30
+									input.input(type='email' placeholder='E-mail')
+								.mb-30
+									input.input(type='password' placeholder='Пароль')
+								.mb-30
+									input.input(type='password' placeholder='Подтверждение пароля')
+								.mb-20
+									+check({
+										id: 'check-agree',
+										text: 'Я согласен на использование персональных данных'
+									})
+								.mb-30
+									a(href='#') Реквизиты
+								.mb-20.text-center
+									input.btn.btn_size_md(type='button' value='Отправить')
+							.col-sm-10.text-center
+								.color-gray Уже есть аккаунт?
+								div
+									a.link.link_line.tab-slide__link(href='#' data-tab-slide-link='tabModalEnter') Войдите

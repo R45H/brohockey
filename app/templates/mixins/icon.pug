@@ -4,6 +4,8 @@ mixin icon(data)
 	a.icon(
 		href= data.link
 		class= attributes.class
+		data-modal= attributes.dataModal || null
+		data-modal-close= attributes.dataModalClose || null
 	)
 		.icon__wrap
 			+svg(data.icon, 'icon__img')

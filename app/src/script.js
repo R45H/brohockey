@@ -23,6 +23,18 @@ $(function() {
 	(function() {
 		//=require 'blocks/scroll.js'
 	}());
+	(function() {
+		//=require 'blocks/modal/modal.js'
+	}());
+	(function() {
+		//=require 'blocks/aside/aside.js'
+	}());
+	(function() {
+		//=require 'blocks/tab-slide/tab-slide.js'
+	}());
+	(function() {
+		//=require 'blocks/select/select.js'
+	}());
 	/* Blocks will be inserted here */
 });
 
