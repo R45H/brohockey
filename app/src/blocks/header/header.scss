@@ -16,7 +16,7 @@ $name: header;
 		transition: $duration / 2 ease all, 0s padding-right;
 		background: $color-text;
 		padding: 15px 0;
-		border: 1px solid transparent;
+		border-bottom: 1px solid transparent;
 	}
 
 	&__wrap {
