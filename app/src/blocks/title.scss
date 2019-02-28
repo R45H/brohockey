@@ -109,4 +109,46 @@ $name: title;
 			margin-left: .5em;
 		}
 	}
+
+	&_line_around-horizontal {
+		display: inline-flex;
+		align-items: center;
+
+		&::before,
+		&::after {
+			content: '';
+			height: 1px;
+			width: 1em;
+			background-color: currentColor;
+		}
+
+		&::before {
+			margin-right: .5em;
+		}
+
+		&::after {
+			margin-left: .5em;
+		}
+	}
+
+	&_quote {
+		position: relative;
+
+		&::before,
+		&::after {
+			font-weight: bold;
+			line-height: 0;
+			vertical-align: middle;
+		}
+
+		&::before {
+			content: '\201C';
+			margin-right: .2em;
+		}
+
+		&::after {
+			content: '\201D';
+			margin-left: .2em;
+		}
+	}
 }

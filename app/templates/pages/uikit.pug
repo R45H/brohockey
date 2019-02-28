@@ -80,6 +80,10 @@ include ../mixins/icon
 				.title.title_line_after .title.title_line_after
 			.mb-5
 				.title.title_line_around .title.title_line_around
+			.mb-5
+				.title.title_line_around-horizontal .title.title_line_around-horizontal
+			.mb-5
+				.title.title_quote .title.title_quote
 
 	.main__separator
 		.row.mb-15
@@ -382,3 +386,29 @@ include ../mixins/icon
 				.tab-slide__item.tab-slide__item_hidden(data-tab-slide-target='tabSlide3')
 					a.tab-slide__link(href='#' data-tab-slide-link='tabSlide1') .tab-slide LinkTo1
 					a.tab-slide__link(href='#' data-tab-slide-link='tabSlide2') .tab-slide LinkTo2
+
+	.row.main__separator
+		.col-12
+			.image-group
+
+				each val in banner
+					.image-group__col
+						+banner({
+							link: val.img,
+							img: val.img,
+							zoom: {
+								group: 'group-2',
+								title: 'Banner'
+							}
+						})
+
+				each val in banner_02
+					.image-group__col
+						+banner({
+							link: val.img,
+							img: val.img,
+							zoom: {
+								group: 'group-2',
+								title: 'Banner'
+							}
+						})

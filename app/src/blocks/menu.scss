@@ -38,6 +38,7 @@ $name: menu;
 
 	&__item {
 		display: block;
+		word-break: normal;
 	}
 
 	&__link {

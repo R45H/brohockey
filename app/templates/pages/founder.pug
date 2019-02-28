@@ -1,0 +1,73 @@
+include ../mixins/banner
+
+.section
+	.container
+		.text-center
+			.mb-15
+				.title.title_as_h2.title_font_second.upper Дмитрий Казионов
+			.mb-30
+				.title.title_as_h3.title_font_third.title_line_around-horizontal.upper Основатель школы
+
+		.row.align-items-center
+			.col-md-6.col-lg-7.col-xl-8.mb-30
+				img(src='img/content/banner/01/01.jpg')
+			.col-md-6.col-lg-5.col-xl-4.mb-30
+				.text
+					p Мастер спорта международного класса, центральный нападающий. Воспитанник московского Динамо. Выступал за юношескую, молодежную и национальную сборные команды России. Выбран на драфте НХЛ в 4-м раунде под общим номером 100 клубом Tampa Bay Lightning.
+					p Трехкратный обладатель кубка Гагарина (Ак Барс 2009, Ак Барс 2010, Металлург Мг 2014)
+						br
+						| Трехкратный серебряный призер чемпионата России (Лада 2005, Ак Барс 2007, Металлург Мг 2017)
+						br
+						| Двукратный бронзовый призер чемпионата России (Лада 2003, Лада 2004)
+						br
+						| Двукратный обладатель Кубка Европейских Чемпионов (Динамо 2006, Ак Барс 2007)
+						br
+						| Обладатель Континентального кубка(Ак Барс 2008)
+						br
+						| Серебряный призер молодежного чемпионата мира 2004.
+
+		.row.align-items-center
+			.col-md-6.order-md-1.col-lg-5.col-xl-4.mb-30
+				img(src='img/content/banner/01/01.jpg')
+			.col-md-6.col-lg-7.col-xl-8.mb-30
+				.text
+					p Выступал в командах: Лада, Динамо Москва, Ак Барс, Металлург Мг, Торпедо НН, ХК Сочи, Металлург Мг, Динамо Москва, Северсталь.
+					p Всего в чемпионатах страны провел более 900 матчей, из них в КХЛ более 600 матчей.
+					p Имеет два высших образования.
+						br
+						| Окончил Тольяттинский государственный университет и Казанский федеральный университет
+						| В настоящее время учится в университете «Синергия».
+
+		.row.align-items-center
+			.col-md-6.col-lg-5.col-xl-4.mb-30
+				img(src='img/content/banner/01/01.jpg')
+			.col-md-6.col-lg-7.col-xl-6.offset-xl-2.mb-30
+				.title.title_as_h2.title_quote.upper Ты не проигравший до тех пор,
+					br
+					| пока ты не сдался.
+
+		.row
+			.col-12
+				.image-group
+
+					each val in banner
+						.image-group__col
+							+banner({
+								link: val.img,
+								img: val.img,
+								zoom: {
+									group: 'group-2',
+									title: 'Banner'
+								}
+							})
+
+					each val in banner_02
+						.image-group__col
+							+banner({
+								link: val.img,
+								img: val.img,
+								zoom: {
+									group: 'group-2',
+									title: 'Banner'
+								}
+							})
