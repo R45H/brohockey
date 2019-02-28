@@ -16,7 +16,7 @@ $name: input;
 	padding: 5px 0;
 	color: $color-text;
 
-	@include input-autofill($color-text);
+	@include input-autofill($color-text, $color-text, white);
 
 	@include input-placeholder {
 		color: $color-gray;
@@ -35,7 +35,7 @@ $name: input;
 		border-bottom-color: white;
 		color: white;
 
-		@include input-autofill(white);
+		@include input-autofill(white, white, $color-text);
 
 		&:focus {
 
