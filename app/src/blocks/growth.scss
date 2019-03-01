@@ -1,10 +1,28 @@
 $name: growth;
 
 .#{$name} {
-	padding: 20px;
+	padding: 20px 10px;
 	background: rgba($color-gray, .11);
 	height: 100%;
 	color: white;
+	fill: currentColor;
+	transition: $duration ease;
+
+	&:hover {
+		transform: scale(1.06);
+		color: $color-text;
+		background: white;
+
+		.#{$name} {
+
+			&__wrap {
+
+				&::after {
+					width: 50%;
+				}
+			}
+		}
+	}
 
 	&__wrap {
 		display: flex;
@@ -18,6 +36,7 @@ $name: growth;
 			height: 1px;
 			background-color: currentColor;
 			margin: 15px auto 0;
+			transition: $duration ease width;
 		}
 	}
 
@@ -32,11 +51,14 @@ $name: growth;
 	&__icon {
 		height: 80px;
 		width: auto;
-		fill: white;
 	}
 
 	&__title {
 		margin-top: auto;
 		margin-bottom: auto;
+
+		@include screen-md(max) {
+			font-size: 19px;
+		}
 	}
 }

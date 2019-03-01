@@ -100,10 +100,16 @@ include ../mixins/icon
 				button.btn button.btn
 		.row.mb-15
 			.col-5
+				.btn.btn_fill .btn.btn_fill
+		.row.mb-15
+			.col-5
 				.btn.btn_wide .btn.btn_wide
 		.row.mb-15
 			.col-5.main__black
 				.btn.btn_color_white .btn.btn_color_white
+		.row.mb-15
+			.col-5.main__black
+				.btn.btn_fill.btn_color_white .btn.btn_fill.btn_color_white
 		.row.mb-15
 			.col-5
 				.btn.btn_size_md .btn.btn_size_md
@@ -179,7 +185,7 @@ include ../mixins/icon
 				text: '.check.check_color_white'
 			})(class='check_color_white')
 
-	.row.main__separator
+	.row
 
 		.col-4.mb-30
 			+banner({
@@ -226,6 +232,21 @@ include ../mixins/icon
 		.col-4.mb-30
 			+banner({
 				link: '#',
+				img: 'img/content/banner/01/01.jpg'
+			})(class='banner_fog_bottom')
+				.title.title_font_second.title_as_h4.upper Дмитрий
+
+		.col-4.mb-30
+			+banner({
+				link: '#',
+				img: 'img/content/banner/01/01.jpg',
+				moreLink: true
+			})(class='banner_fog_bottom')
+				.title.title_font_second.title_as_h4.upper Дмитрий
+
+		.col-4.mb-30
+			+banner({
+				link: '#',
 				img: 'img/content/banner/01/01.jpg',
 				moreLink: true
 			})
@@ -258,6 +279,14 @@ include ../mixins/icon
 				img: 'img/content/banner/01/01.jpg',
 				moreLink: true
 			})(class='banner_space_2x')
+				.title.title_font_second.title_as_h4.upper Дмитрий
+
+	.row.main__separator
+		.col-4.mb-30
+			+banner({
+				link: '#',
+				img: 'img/content/banner/01/01.jpg'
+			})(class='banner_rect')
 				.title.title_font_second.title_as_h4.upper Дмитрий
 
 	.row.main__separator

@@ -22,8 +22,8 @@ $blocks.each(function() {
 		rows: sliderRows,
 		slidesToShow: sliderCols,
 		slidesToScroll: sliderCols,
+		infinite: false,
 		arrows: false,
-		dots: true,
 		dotsClass: classDots,
 		customPaging: function() {
 			return '<div class="' + classDot + '"></div>'
@@ -35,7 +35,8 @@ $blocks.each(function() {
 				settings: {
 					rows: sliderSmRows,
 					slidesToShow: sliderSmCols,
-					slidesToScroll: sliderSmCols
+					slidesToScroll: sliderSmCols,
+					dots: true
 				}
 			},
 			{
@@ -43,7 +44,8 @@ $blocks.each(function() {
 				settings: {
 					rows: sliderMdRows,
 					slidesToShow: sliderMdCols,
-					slidesToScroll: sliderMdCols
+					slidesToScroll: sliderMdCols,
+					dots: true
 				}
 			},
 			{
@@ -51,7 +53,8 @@ $blocks.each(function() {
 				settings: {
 					rows: sliderLgRows,
 					slidesToShow: sliderLgCols,
-					slidesToScroll: sliderLgCols
+					slidesToScroll: sliderLgCols,
+					dots: true
 				}
 			},
 			{
@@ -59,7 +62,8 @@ $blocks.each(function() {
 				settings: {
 					rows: sliderXlRows,
 					slidesToShow: sliderXlCols,
-					slidesToScroll: sliderXlCols
+					slidesToScroll: sliderXlCols,
+					dots: true
 				}
 			}
 		]

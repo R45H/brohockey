@@ -16,8 +16,8 @@ include ../mixins/slider
 					link: val.link,
 					img: val.img,
 					moreLink: true
-				})(class='banner_align_right banner_valign_top banner_space_2x')
-					.title.title_font_second.title_as_h2.upper.mb-5= val.title
+				})(class='banner_valign_bottom banner_fog_bottom banner_space_2x')
+					.title.title_font_second.title_as_h2.upper.mb-5.main__founder-title= val.title
 					.title.title_as_h2 Основатель школы
 
 #section3.section.section_bg_light
@@ -26,7 +26,7 @@ include ../mixins/slider
 		.row.mb-neg-30
 
 			each val in opportunity
-				.col-md-6.col-lg-4.mb-30
+				.col-6.col-lg-4.mb-30
 					+opportunity(val)
 
 #section4.section
@@ -47,7 +47,7 @@ include ../mixins/slider
 		.row.justify-content-center.mb-neg-15.mb-neg-sm-30
 
 			each val in growth
-				.col-sm-6.col-md-4.col-lg-3.col-xl-2.mb-15.mb-sm-30
+				.col-6.col-sm-4.col-lg-3.col-xl-2.mb-30
 					+growth(val)
 
 #section6.section.section_bg_light
@@ -85,7 +85,7 @@ include ../mixins/slider
 						link: '#',
 						img: val.img,
 						moreLink: true
-					})(class='banner_fog')
+					})(class='banner_fog banner_rect')
 						.title.title_font_second.title_as_h4.upper= val.title
 
 #section9.section.section_fog_dark(style='background-image: url(img/content/section/01.jpg);')

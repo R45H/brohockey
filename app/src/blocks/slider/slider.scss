@@ -5,12 +5,15 @@ $name: slider;
 	background: white;
 	padding: 0;
 
+	a {
+		outline: none;
+	}
+
 	.slick-list {
 		margin: -1px;
 	}
 
 	.slick-slide {
-		outline: none;
 
 		> div {
 			display: flex;

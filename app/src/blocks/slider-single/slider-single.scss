@@ -4,8 +4,11 @@ $name: slider-single;
 	overflow: hidden;
 	position: relative;
 
-	.slick-slide {
+	a {
 		outline: none;
+	}
+
+	.slick-slide {
 
 		> div {
 			display: flex;

@@ -7,8 +7,8 @@ $name: btn;
 	font-family: $font-third;
 	font-size: 14px;
 	font-weight: normal;
-	color: $color-dark;
-	border: 1px solid $color-dark;
+	color: $color-text;
+	border: 1px solid $color-text;
 	background-color: transparent;
 	text-align: center;
 	text-transform: uppercase;
@@ -42,6 +42,23 @@ $name: btn;
 		padding: 16px 40px 12px;
 	}
 
+	&_fill {
+		background-color: $color-text;
+		color: white;
+
+		&:hover,
+		&:focus {
+			color: $color-text;
+			background-color: $color-light;
+		}
+
+		&:active {
+			color: $color-text;
+			background-color: $color-gray;
+			border-color: $color-text;
+		}
+	}
+
 	&_wide {
 		display: block;
 		width: 100%;
@@ -62,6 +79,27 @@ $name: btn;
 			color: $color-text;
 			background-color: $color-gray;
 			border-color: $color-gray;
+		}
+
+		&.#{$name} {
+
+			&_fill {
+				background-color: white;
+				color: $color-text;
+
+				&:hover,
+				&:focus {
+					color: white;
+					background-color: $color-text-light;
+					border-color: white;
+				}
+
+				&:active {
+					color: white;
+					background-color: $color-gray;
+					border-color: white;
+				}
+			}
 		}
 	}
 }

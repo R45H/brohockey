@@ -1,8 +1,22 @@
 $name: opportunity;
 
 .#{$name} {
+	transition: $duration ease;
 	display: block;
 	text-align: center;
+	fill: $color-dark;
+
+	&:hover {
+		color: $color-text-light;
+		fill: $color-text;
+
+		.#{$name} {
+
+			&__icon {
+				transform: scale(1.1);
+			}
+		}
+	}
 
 	&__icon-wrap {
 		display: flex;
@@ -14,27 +28,41 @@ $name: opportunity;
 	&__icon {
 		height: 90px;
 		width: auto;
+		transition: $duration ease transform;
 	}
 
 	&__title {
 		vertical-align: middle;
 
+		@include screen-md(max) {
+			font-size: 19px;
+		}
+
 		&::before,
 		&::after {
-			content: '';
-			vertical-align: middle;
-			display: inline-block;
-			width: 25px;
-			height: 1px;
-			background-color: currentColor;
+
+			@include screen-md() {
+				content: '';
+				vertical-align: middle;
+				display: inline-block;
+				width: 25px;
+				height: 1px;
+				background-color: currentColor;
+			}
 		}
 
 		&::before {
-			margin-right: 10px;
+
+			@include screen-md() {
+				margin-right: 10px;
+			}
 		}
 
 		&::after {
-			margin-left: 10px;
+
+			@include screen-md() {
+				margin-left: 10px;
+			}
 		}
 	}
 }
