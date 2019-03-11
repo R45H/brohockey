@@ -13,7 +13,7 @@ $blocks.each(function() {
 		if (!$target.length) return;
 
 		var
-			headerHeight = $(window).outerWidth() > 991 ? 106 : 40,
+			headerHeight = $(window).outerWidth() > 991 ? 105 : 40,
 			targetPos = $target.offset().top;
 
 		$('html, body')
